@@ -7,7 +7,9 @@ import { ICartProduct } from '../../../../../shared/mocks/1-components/cart-prod
 	changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ShopCardComponent {
-	@Input() product: ICartProduct = {} as ICartProduct;
+	// eslint-disable-next-line @typescript-eslint/explicit-member-accessibility
+	@Input()
+	public product: ICartProduct = {} as ICartProduct;
 
 	@Output()
 	public increment = new EventEmitter();
